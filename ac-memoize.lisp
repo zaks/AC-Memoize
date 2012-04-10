@@ -58,9 +58,3 @@
           (setf (map-value *memo-map* (cons fname nargs)) res)
           (commit)
           (apply #'values res))))))
-
-(defun test (x)
-  (print 'call)
-  (values 10 20 x))
-
-(ac-memoize 'test)
